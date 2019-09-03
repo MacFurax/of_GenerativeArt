@@ -7,16 +7,8 @@ public:
   ParticleEmitter();
   ~ParticleEmitter();
 
-  ofVec2f strength;
-  float spread; // speard of emitter in RADIAN
-
-  virtual void emit(Particle p)
-  {
-    p.alive = true;
-    p.currentTtl = p.startTtl;
-    p.pos = this->pos;
-
-  }
+  ofVec2f initacc;
+  float spread; // spread of emitter in RADIAN
 
 };
 
