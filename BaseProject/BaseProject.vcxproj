@@ -1,0 +1,962 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7FD42DF7-442E-479A-BA76-D0022F99702A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>BaseProject</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="E:\Dev\cpp\of_v0.10.1_vs2017_release\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="E:\Dev\cpp\of_v0.10.1_vs2017_release\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="E:\Dev\cpp\of_v0.10.1_vs2017_release\libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="E:\Dev\cpp\of_v0.10.1_vs2017_release\libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>bin\</OutDir>
+    <IntDir>obj\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_debug</TargetName>
+    <LinkIncremental>true</LinkIncremental>
+    <GenerateManifest>true</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>bin\</OutDir>
+    <IntDir>obj\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_debug</TargetName>
+    <LinkIncremental>true</LinkIncremental>
+    <GenerateManifest>true</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>bin\</OutDir>
+    <IntDir>obj\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>bin\</OutDir>
+    <IntDir>obj\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxGui\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxNetwork\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxOsc\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\posix;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\win32;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxXmlSettings\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxXmlSettings\libs;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxAudioFile\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxAudioFile\libs;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxImGui\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxImGui\libs\imgui\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxMidi\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxMidi\src\desktop;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxMidi\src\ios;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxMidi\libs\pgmidi;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxMidi\libs\rtmidi;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\control;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\convolution;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\core;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\delays;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\dynamics;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\envelopes;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\envelopes\stages;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\filters;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\filters\biquads;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\helpers;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\antialiased;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\antialiased\BLEP;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\base;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\cheap;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\fm;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\phasors;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\wavetable;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\random;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\resamplers;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\samplers;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\samplers\grain;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\signal;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\utility;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\dsphelpers;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\fft;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\interpolation;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\random;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\core;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\functions;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\functions\mathfun;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\vectors;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\tables;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\trig;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\messages;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\dynamics;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\effects;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\equalizers;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\filters;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\oscillators;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\reverbs;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\samplers;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\signal;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\sources;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\helper;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\sequencer;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\libs\audiofft;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxGui\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxNetwork\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxOsc\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\posix;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\win32;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxXmlSettings\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxXmlSettings\libs;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxAudioFile\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxAudioFile\libs;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxImGui\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxImGui\libs\imgui\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxMidi\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxMidi\src\desktop;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxMidi\src\ios;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxMidi\libs\pgmidi;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxMidi\libs\rtmidi;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\control;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\convolution;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\core;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\delays;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\dynamics;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\envelopes;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\envelopes\stages;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\filters;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\filters\biquads;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\helpers;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\antialiased;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\antialiased\BLEP;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\base;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\cheap;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\fm;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\phasors;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\wavetable;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\random;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\resamplers;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\samplers;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\samplers\grain;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\signal;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\utility;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\dsphelpers;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\fft;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\interpolation;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\random;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\core;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\functions;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\functions\mathfun;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\vectors;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\tables;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\trig;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\messages;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\dynamics;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\effects;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\equalizers;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\filters;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\oscillators;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\reverbs;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\samplers;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\signal;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\sources;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\helper;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\sequencer;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\libs\audiofft;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxGui\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxNetwork\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxOsc\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\posix;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\win32;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxXmlSettings\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxXmlSettings\libs;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxAudioFile\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxAudioFile\libs;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxImGui\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxImGui\libs\imgui\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxMidi\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxMidi\src\desktop;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxMidi\src\ios;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxMidi\libs\pgmidi;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxMidi\libs\rtmidi;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\control;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\convolution;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\core;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\delays;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\dynamics;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\envelopes;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\envelopes\stages;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\filters;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\filters\biquads;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\helpers;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\antialiased;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\antialiased\BLEP;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\base;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\cheap;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\fm;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\phasors;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\wavetable;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\random;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\resamplers;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\samplers;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\samplers\grain;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\signal;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\utility;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\dsphelpers;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\fft;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\interpolation;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\random;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\core;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\functions;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\functions\mathfun;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\vectors;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\tables;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\trig;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\messages;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\dynamics;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\effects;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\equalizers;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\filters;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\oscillators;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\reverbs;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\samplers;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\signal;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\sources;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\helper;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\sequencer;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\libs\audiofft;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxGui\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxNetwork\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxOsc\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\posix;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\win32;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxXmlSettings\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxXmlSettings\libs;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxAudioFile\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxAudioFile\libs;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxImGui\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxImGui\libs\imgui\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxMidi\src;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxMidi\src\desktop;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxMidi\src\ios;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxMidi\libs\pgmidi;E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxMidi\libs\rtmidi;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\control;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\convolution;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\core;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\delays;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\dynamics;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\envelopes;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\envelopes\stages;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\filters;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\filters\biquads;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\helpers;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\antialiased;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\antialiased\BLEP;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\base;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\cheap;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\fm;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\phasors;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\wavetable;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\random;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\resamplers;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\samplers;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\samplers\grain;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\signal;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\utility;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\dsphelpers;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\fft;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\interpolation;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\random;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\core;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\functions;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\functions\mathfun;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\vectors;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\tables;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\trig;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\messages;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\dynamics;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\effects;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\equalizers;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\filters;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\oscillators;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\reverbs;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\samplers;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\signal;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\sources;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\helper;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\sequencer;
+E:\Dev\cpp\of_v0.10.1_vs2017_release\addons\ofxPDSP\libs\audiofft;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
+    <Link>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxAudioFile\src\ofxAudioFile.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxBaseGui.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxButton.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxColorPicker.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxGuiGroup.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxInputField.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxLabel.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxPanel.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxSlider.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxSliderGroup.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxToggle.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxImGui\libs\imgui\src\imgui.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxImGui\libs\imgui\src\imgui_demo.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxImGui\libs\imgui\src\imgui_draw.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxImGui\libs\imgui\src\imgui_widgets.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxImGui\src\BaseEngine.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxImGui\src\CorporateGreyTheme.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxImGui\src\DefaultTheme.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxImGui\src\EngineGLFW.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxImGui\src\EngineOpenGLES.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxImGui\src\EngineVk.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxImGui\src\Gui.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxImGui\src\Helpers.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxImGui\src\ofxImGuiLoggerChannel.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxMidi\libs\rtmidi\RtMidi.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxMidi\src\desktop\ofxRtMidiIn.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxMidi\src\desktop\ofxRtMidiOut.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxMidi\src\ofxBaseMidi.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxMidi\src\ofxMidi.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxMidi\src\ofxMidiClock.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxMidi\src\ofxMidiIn.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxMidi\src\ofxMidiMessage.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxMidi\src\ofxMidiOut.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxMidi\src\ofxMidiTimecode.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxNetwork\src\ofxNetworkUtils.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxNetwork\src\ofxTCPClient.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxNetwork\src\ofxTCPManager.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxNetwork\src\ofxTCPServer.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxNetwork\src\ofxUDPManager.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\IpEndpointName.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\posix\NetworkingUtils.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\posix\UdpSocket.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\win32\NetworkingUtils.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\win32\UdpSocket.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscOutboundPacketStream.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscPrintReceivedElements.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscReceivedElements.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscTypes.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\src\ofxOscBundle.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\src\ofxOscMessage.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\src\ofxOscParameterSync.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\src\ofxOscReceiver.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\src\ofxOscSender.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\libs\audiofft\AudioFFT.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\control\SequencerBridge.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\control\SequencerGateOutput.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\control\SequencerValueOutput.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\control\ToGateTrigger.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\control\TriggerControl.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\control\TriggerGeiger.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\control\ValueControl.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\convolution\FDLConvolver.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\core\Amp.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\core\BasicNodes.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\core\BufferShell.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\core\ExternalInput.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\core\Formula.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\core\leftSum.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\core\operators.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\core\PatchNode.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\core\Preparable.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\core\Processor.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\core\Switch.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\delays\AllPassDelay.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\delays\Delay.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\delays\SRDelay.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\dynamics\AbsoluteValue.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\dynamics\EnvelopeFollower.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\dynamics\GainComputer.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\dynamics\LHDelay.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\dynamics\PositiveValue.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\dynamics\RMSDetector.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\dynamics\SquarePeakDetector.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\envelopes\ADSR.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\envelopes\AHR.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\envelopes\stages\EnvelopeStage.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\filters\APF1.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\filters\APF4.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\filters\biquads\BiquadBase.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\filters\biquads\BiquadHighShelf.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\filters\biquads\BiquadHPF2.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\filters\biquads\BiquadLowShelf.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\filters\biquads\BiquadLPF2.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\filters\biquads\BiquadPeakEQ.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\filters\MultiLadder4.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\filters\OnePole.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\filters\SVF2.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\helpers\FFTWorker.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\helpers\UsesSlew.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\antialiased\BLEPSaw.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\antialiased\BLEP\BLEPBased.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\antialiased\BLEP\BLEPTable.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\antialiased\DPWTri.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\base\Oscillator.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\base\OscillatorVariShape.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\cheap\CheapPulse.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\cheap\CheapSaw.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\cheap\CheapSine.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\cheap\CheapTri.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\fm\SineFB.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\phasors\ClockedPhasor.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\phasors\LFOPhasor.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\phasors\PhasorShifter.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\phasors\PMPhasor.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\wavetable\DataOsc.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\wavetable\DataTable.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\wavetable\WaveTable.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\wavetable\WaveTableOsc.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\random\TriggeredRandom.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\random\WhiteNoise.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\resamplers\BandLimit.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\resamplers\DownSampler.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\resamplers\IIRDownSampler2x.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\resamplers\IIRUpSampler2x.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\resamplers\UpSampler.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\resamplers\ZeroDownSampler.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\resamplers\ZeroUpSampler.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\samplers\GrainWindow.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\samplers\grain\GrainBased.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\samplers\grain\GrainTable.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\samplers\SampleBuffer.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\samplers\Sampler.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\signal\Bitcruncher.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\signal\Decimator.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\signal\SampleAndHold.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\signal\Saturator1.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\signal\Saturator2.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\signal\SoftClip.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\utility\BipolarToUnipolar.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\utility\DBtoLin.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\utility\FreqToMs.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\utility\LinToDB.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\utility\MaxValue.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\utility\OneBarTimeMs.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\utility\OneMinusInput.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\utility\PitchToFreq.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\utility\SamplesDelay.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\dsphelpers\incrementCalculator.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\dsphelpers\sanity_check.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\random\random.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\core\activate.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\core\allocator.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\tables\blep.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\tables\dsp_windows.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\messages\Clockable.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\messages\MessageBuffer.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\dynamics\Compressor.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\dynamics\Ducker.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\effects\DimensionChorus.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\equalizers\AAHighShelfEQ.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\equalizers\AALowShelfEQ.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\equalizers\AAPeakEQ.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\equalizers\HighCut.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\equalizers\HighShelfEQ.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\equalizers\LowCut.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\equalizers\LowShelfEQ.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\equalizers\PeakEQ.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\filters\CombFilter.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\filters\PhaserFilter.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\filters\SVFilter.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\filters\VAFilter.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\oscillators\ADSR_OSC.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\oscillators\ClockedLFO.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\oscillators\DataOscillator.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\oscillators\FMOperator.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\oscillators\LFO.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\oscillators\TableOscillator.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\oscillators\VAOscillator.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\reverbs\BasiVerb.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\reverbs\IRVerb.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\samplers\GrainCloud.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\samplers\TriggeredGrain.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\signal\LinearCrossfader.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\signal\Panner.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\sources\BitNoise.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\ComputerKeyboard.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\Engine.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\helper\EngineGraphics.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\helper\MidiCCBuffers.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\helper\MidiKeysBuffers.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\helper\SequencerSectionPlotter.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\MidiControls.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\MidiIn.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\MidiKeys.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\MidiOut.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\MidiPads.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\ofxPDSPFunctions.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\OscInput.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\OscOutput.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\Parameter.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\ParameterAmp.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\ParameterGain.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\SampleBufferPlotter.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\Scope.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\SerialOut.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\Wrapper.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\sequencer\Sequence.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\sequencer\SequencerMessage.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\sequencer\SequencerProcessor.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\sequencer\SequencerSection.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\sequencer\stockBehaviors.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxXmlSettings\libs\tinyxml.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxXmlSettings\libs\tinyxmlerror.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxXmlSettings\libs\tinyxmlparser.cpp" />
+    <ClCompile Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxXmlSettings\src\ofxXmlSettings.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\ofApp.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxAudioFile\libs\dr_flac.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxAudioFile\libs\dr_mp3.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxAudioFile\libs\dr_wav.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxAudioFile\libs\stb_vorbis.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxAudioFile\src\ofxAudioFile.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxBaseGui.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxButton.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxColorPicker.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxGui.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxGuiGroup.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxInputField.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxLabel.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxPanel.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxSlider.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxSliderGroup.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxGui\src\ofxToggle.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxImGui\libs\imgui\src\imgui.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxImGui\libs\imgui\src\imgui_internal.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxImGui\libs\imgui\src\imstb_rectpack.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxImGui\libs\imgui\src\imstb_textedit.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxImGui\libs\imgui\src\imstb_truetype.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxImGui\src\BaseEngine.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxImGui\src\BaseTheme.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxImGui\src\CorporateGreyTheme.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxImGui\src\DefaultTheme.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxImGui\src\EngineGLFW.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxImGui\src\EngineOpenGLES.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxImGui\src\EngineVk.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxImGui\src\Gui.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxImGui\src\Helpers.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxImGui\src\imconfig.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxImGui\src\ofxImGui.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxImGui\src\ofxImGuiLoggerChannel.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxMidi\libs\pgmidi\iOSVersionDetection.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxMidi\libs\pgmidi\PGArc.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxMidi\libs\pgmidi\PGMidi.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxMidi\libs\pgmidi\PGMidiAllSources.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxMidi\libs\pgmidi\PGMidiFind.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxMidi\libs\rtmidi\RtMidi.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxMidi\src\desktop\ofxRtMidiIn.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxMidi\src\desktop\ofxRtMidiOut.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxMidi\src\ios\ofxPGMidiContext.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxMidi\src\ios\ofxPGMidiDelegate.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxMidi\src\ios\ofxPGMidiIn.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxMidi\src\ios\ofxPGMidiOut.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxMidi\src\ios\ofxPGMidiSourceDelegate.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxMidi\src\ofxBaseMidi.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxMidi\src\ofxMidi.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxMidi\src\ofxMidiClock.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxMidi\src\ofxMidiConstants.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxMidi\src\ofxMidiIn.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxMidi\src\ofxMidiMessage.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxMidi\src\ofxMidiOut.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxMidi\src\ofxMidiTimecode.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxMidi\src\ofxMidiTypes.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxNetwork\src\ofxNetwork.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxNetwork\src\ofxNetworkUtils.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxNetwork\src\ofxTCPClient.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxNetwork\src\ofxTCPManager.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxNetwork\src\ofxTCPServer.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxNetwork\src\ofxTCPSettings.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxNetwork\src\ofxUDPManager.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxNetwork\src\ofxUDPSettings.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\IpEndpointName.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\NetworkingUtils.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\PacketListener.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\TimerListener.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\ip\UdpSocket.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\MessageMappingOscPacketListener.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscException.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscHostEndianness.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscOutboundPacketStream.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscPacketListener.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscPrintReceivedElements.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscReceivedElements.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\libs\oscpack\src\osc\OscTypes.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\src\ofxOsc.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\src\ofxOscArg.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\src\ofxOscBundle.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\src\ofxOscMessage.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\src\ofxOscParameterSync.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\src\ofxOscReceiver.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxOsc\src\ofxOscSender.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\libs\audiofft\AudioFFT.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\control\SequencerBridge.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\control\SequencerGateOutput.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\control\SequencerValueOutput.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\control\ToGateTrigger.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\control\TriggerControl.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\control\TriggerGeiger.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\control\ValueControl.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\convolution\FDLConvolver.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\core\Amp.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\core\BasicNodes.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\core\BufferShell.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\core\ExternalInput.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\core\Formula.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\core\leftSum.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\core\operators.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\core\PatchNode.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\core\Preparable.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\core\Processor.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\core\Switch.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\delays\AllPassDelay.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\delays\Delay.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\delays\SRDelay.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\dynamics\AbsoluteValue.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\dynamics\EnvelopeFollower.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\dynamics\GainComputer.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\dynamics\LHDelay.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\dynamics\PositiveValue.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\dynamics\RMSDetector.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\dynamics\SquarePeakDetector.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\envelopes\ADSR.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\envelopes\AHR.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\envelopes\stages\AttackStage.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\envelopes\stages\DecayStage.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\envelopes\stages\EnvelopeStage.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\envelopes\stages\HoldStage.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\envelopes\stages\ReleaseStage.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\envelopes\stages\RiseStage.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\envelopes\stages\SustainStage.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\filters\APF1.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\filters\APF4.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\filters\biquads\BiquadBase.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\filters\biquads\BiquadHighShelf.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\filters\biquads\BiquadHPF2.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\filters\biquads\BiquadLowShelf.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\filters\biquads\BiquadLPF2.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\filters\biquads\BiquadPeakEQ.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\filters\MultiLadder4.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\filters\OnePole.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\filters\SVF2.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\header.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\helpers\FFTWorker.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\helpers\UsesSlew.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\antialiased\BLEPSaw.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\antialiased\BLEP\BLEPBased.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\antialiased\BLEP\BLEPFunc.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\antialiased\BLEP\BLEPTable.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\antialiased\DPWTri.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\base\Oscillator.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\base\OscillatorVariShape.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\cheap\CheapPulse.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\cheap\CheapSaw.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\cheap\CheapSine.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\cheap\CheapTri.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\fm\SineFB.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\phasors\ClockedPhasor.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\phasors\LFOPhasor.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\phasors\PhasorShifter.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\phasors\PMPhasor.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\wavetable\DataOsc.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\wavetable\DataTable.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\wavetable\WaveTable.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\oscillators\wavetable\WaveTableOsc.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\pdspConstants.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\pdspCore.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\pdspFunctions.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\random\TriggeredRandom.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\random\WhiteNoise.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\resamplers\BandLimit.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\resamplers\DownSampler.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\resamplers\IIRDownSampler2x.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\resamplers\IIRUpSampler2x.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\resamplers\resamplers.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\resamplers\UpSampler.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\resamplers\ZeroDownSampler.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\resamplers\ZeroUpSampler.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\samplers\GrainWindow.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\samplers\grain\GrainBased.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\samplers\grain\GrainTable.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\samplers\SampleBuffer.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\samplers\Sampler.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\signal\Bitcruncher.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\signal\Decimator.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\signal\SampleAndHold.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\signal\Saturator1.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\signal\Saturator2.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\signal\SoftClip.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\utility\BipolarToUnipolar.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\utility\DBtoLin.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\utility\FreqToMs.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\utility\LinToDB.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\utility\MaxValue.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\utility\OneBarTimeMs.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\utility\OneMinusInput.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\utility\PitchToFreq.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\DSP\utility\SamplesDelay.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\flags.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\dsphelpers\calculateGainReduction.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\dsphelpers\genPulse.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\dsphelpers\genSaw.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\dsphelpers\genTriangle.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\dsphelpers\incrementCalculator.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\dsphelpers\nonlinear1.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\dsphelpers\phazorShifter.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\dsphelpers\sanity_check.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\dsphelpers\warpCutoff.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\fft\complex_mult_add.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\fft\include_audiofft.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\functions.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\header.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\interpolation\cosine.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\interpolation\hermite.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\interpolation\linear.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\interpolation\smooth.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\random\random.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\core\activate.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\core\allocator.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\core\flags.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\core\inlines.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\functions.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\functions\floor.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\functions\mathfun.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\functions\mathfun\mathfun_NEON.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\functions\mathfun\mathfun_SSE2.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\functions\simd_wrapper.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\functions\ternaryOp.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\header.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels\inline_logSB.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels\inline_powSB.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels\inline_ramp.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels\kernel_1divB.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels\kernel_absB.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels\kernel_B.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels\kernel_BaddC.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels\kernel_BaddS.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels\kernel_Badd_CmulS.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels\kernel_BdivC.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels\kernel_BmulC.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels\kernel_BmulS.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels\kernel_BsubC.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels\kernel_BsubS.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels\kernel_clipB.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels\kernel_cosB.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels\kernel_expB.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels\kernel_floorB.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels\kernel_logB.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels\kernel_maxBC.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels\kernel_maxBS.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels\kernel_minBC.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels\kernel_minBS.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels\kernel_negB.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels\kernel_S.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels\kernel_sinB.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels\kernel_sqrtB.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels\kernel_SsubB.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels\kernel_tanB.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\kernels\kernel_Zero.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\vectors\vect_ops.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\simd\vectors\vect_transform.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\tables\blep.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\tables\dsp_windows.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\trig\fastcos.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\trig\fastsin.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\trig\fasttan.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\math\trig\fasttanh.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\messages\Clockable.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\messages\ExtSequencer.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\messages\header.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\messages\Message.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\messages\MessageBuffer.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\dynamics\Compressor.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\dynamics\Ducker.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\effects\DimensionChorus.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\equalizers\AAHighShelfEQ.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\equalizers\AALowShelfEQ.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\equalizers\AAPeakEQ.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\equalizers\HighCut.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\equalizers\HighShelfEQ.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\equalizers\LowCut.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\equalizers\LowShelfEQ.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\equalizers\PeakEQ.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\filters\CombFilter.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\filters\PhaserFilter.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\filters\SVFilter.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\filters\VAFilter.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\header.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\oscillators\ADSR_OSC.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\oscillators\ClockedLFO.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\oscillators\DataOscillator.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\oscillators\FMOperator.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\oscillators\LFO.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\oscillators\TableOscillator.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\oscillators\VAOscillator.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\reverbs\BasiVerb.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\reverbs\IRVerb.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\samplers\GrainCloud.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\samplers\TriggeredGrain.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\signal\LinearCrossfader.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\signal\Panner.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\modules\sources\BitNoise.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofxPDSP.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofxPDSPLegacy.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\ComputerKeyboard.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\Engine.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\helper\Controller.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\helper\EngineGraphics.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\helper\MidiCCBuffers.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\helper\MidiKeysBuffers.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\helper\PositionedMidiMessage.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\helper\SequencerSectionPlotter.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\Midi.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\MidiControls.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\MidiIn.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\MidiKeys.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\MidiOut.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\MidiPads.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\ofxPDSPFunctions.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\OscInput.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\OscOutput.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\Parameter.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\ParameterAmp.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\ParameterGain.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\SampleBufferPlotter.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\Scope.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\SerialOut.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\ofx\Wrapper.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\sequencer\header.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\sequencer\Sequence.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\sequencer\SequencerMessage.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\sequencer\SequencerProcessor.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\sequencer\SequencerSection.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\sequencer\stockBehaviors.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxPDSP\src\types.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxXmlSettings\libs\tinyxml.h" />
+    <ClInclude Include="..\..\..\of_v0.10.1_vs2017_release\addons\ofxXmlSettings\src\ofxXmlSettings.h" />
+    <ClInclude Include="src\ofApp.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">
+      <Project>{5837595d-aca9-485c-8e76-729040ce4b0b}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="icon.rc">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/D_DEBUG %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/D_DEBUG %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(OF_ROOT)\libs\openFrameworksCompiled\project\vs</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="icon.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
