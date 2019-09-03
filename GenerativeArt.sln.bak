@@ -5,12 +5,10 @@ VisualStudioVersion = 15.0.28307.779
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BaseProject", "BaseProject\BaseProject.vcxproj", "{7FD42DF7-442E-479A-BA76-D0022F99702A}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "openFrameworksLib", "..\..\of_v0.10.1_vs2017_release\libs\openFrameworksCompiled\project\vs\openFrameworksLib.vcxproj", "{5837595D-ACA9-485C-8E76-729040CE4B0B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "openFrameworksLib", "$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openFrameworksLib.vcxproj", "{5837595D-ACA9-485C-8E76-729040CE4B0B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{51BB105E-D704-4559-A2F6-B42596E00D3A}"
 	ProjectSection(SolutionItems) = preProject
-		.gitattributes = .gitattributes
-		.gitignore = .gitignore
 		README.MD = README.MD
 	EndProjectSection
 EndProject

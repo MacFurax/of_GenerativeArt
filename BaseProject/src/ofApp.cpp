@@ -3,6 +3,19 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 
+  // change to false if you don't want the amplication to close on ESC key pressed
+  ofSetEscapeQuitsApp(true); 
+
+  // Log settings
+  ofSetLogLevel(OF_LOG_VERBOSE); // log level filter
+  ofLogToFile("app.log"); // log to file data/app.Log
+
+  // app title
+  ofSetWindowTitle("App Title"); 
+
+  // if you want your application to run as fast as possible leave this to false
+  ofSetVerticalSync(false);
+
 }
 
 //--------------------------------------------------------------

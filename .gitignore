@@ -18,7 +18,12 @@
 x64/
 x86/
 bld/
-[Bb]in/
+##[Bb]in/
+*/[Bb]in/*
+#[Bb]in/*
+!*/[Bb]in/imgui.ini
+!*/[Bb]in/[Dd]ata/
+*/[Bb]in/[Dd]ata/*.log
 [Oo]bj/
 [Ll]og/
 
