@@ -12,8 +12,10 @@ void ofApp::setup(){
 
   // app title
   ofSetWindowTitle("App Title"); 
-
+  
   // if you want your application to run as fast as possible leave this to false
+  // be carrefull that when running at max speed, GPU/CPU heat up faster
+  // you can also dynamically change it when needed
   ofSetVerticalSync(false);
 
   lastFrameTime = ofGetElapsedTimeMillis();

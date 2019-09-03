@@ -1,10 +1,10 @@
 # Generative Art
 
-Solution with multiple Generative Art sub-projects.
+Solution with multiple Generative Art sub-projects. Only tester with Visual Studio on Windows.
 
 ## Dependencies
 
-OpenFrameWorks 10.1, to compile you need to define an environment variable called OF_ROOT that contains the path to the openframeworks root folder.
+OpenFrameWorks **10.1**, to compile you need to define an environment variable called **OF_ROOT** that contains the path to the openframeworks root folder.
 
 - ofxImGui from my fork https://github.com/MacFurax/ofxImGui
 - ofxPDSP from my fork https://github.com/MacFurax/ofxPDSP
@@ -38,6 +38,10 @@ For VS 2019 see:
 
 https://docs.microsoft.com/en-us/visualstudio/ide/how-to-locate-and-organize-project-and-item-templates?view=vs-2019
 
+This will allow you to create a new project based a reference one.
+
+![Add new Project Dialog](.\assets\Add New Project.png)
+
 To compile you need to define an environment variable called OF_ROOT that contains the path to the openframeworks root folder.
 
 If you add a new project without the template, you should edit the project file to replace reference to openframeworks rot folder by **$(OF_ROOT)**.
@@ -50,9 +54,7 @@ You might need to update the reference to OF root folder by manually editing
 
 ### Assets for Template projects
 
-Icon and image for template are stored in the assets folder. 
-
-
+Icon and image for template are stored in the **assets** folder. 
 
 ## .gitignore
 

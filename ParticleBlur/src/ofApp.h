@@ -22,9 +22,9 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 
     uint64_t lastFrameTime; // used to calculate deltaTime between frame
-                        // see https://openframeworks.cc/documentation/utils/ofUtils/#show_ofGetElapsedTimeMillis
-                        // this value is reset if calling ofResetElapsedTimeCounter()
-                        // so if you need to call ofResetElapsedTimeCounter() you can have issues with detaTime
+                            // see https://openframeworks.cc/documentation/utils/ofUtils/#show_ofGetElapsedTimeMillis
+                            // this value is reset if calling ofResetElapsedTimeCounter()
+                            // so if you need to call ofResetElapsedTimeCounter() you can have issues with detaTime
     float deltaTime = 0; // in seconds
 		
 };
