@@ -1,6 +1,8 @@
 #pragma once
 
 #include "ofMain.h"
+#include "Particle.h"
+#include "ParticleEmitter.h"
 
 class ofApp : public ofBaseApp{
 
@@ -26,5 +28,13 @@ class ofApp : public ofBaseApp{
                             // this value is reset if calling ofResetElapsedTimeCounter()
                             // so if you need to call ofResetElapsedTimeCounter() you can have issues with detaTime
     float deltaTime = 0; // in seconds
+
+
+    //
+    // Start you project definition bellow
+    //
+
+    std::vector<Particle> particles = std::vector<Particle>( 2000 );
+    std::vector<ParticleEmitter> emitters = std::vector<ParticleEmitter>(4);
 		
 };

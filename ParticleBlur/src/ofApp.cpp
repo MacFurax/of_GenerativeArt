@@ -19,14 +19,31 @@ void ofApp::setup(){
   ofSetVerticalSync(false);
 
   lastFrameTime = ofGetElapsedTimeMillis();
+
+
+  //
+  // your init code bellow
+  //
+
+  for (auto& em : emitters)
+  {
+    ofLogNotice() << "Emitter";
+  }
+
+
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
   deltaTime = 0.0001f*(float)(ofGetElapsedTimeMillis() - lastFrameTime);
 
-  // your code come here
+  //
+  // your update code start here
+  //
 
+  //
+  // your update code stop here
+  //
 
   lastFrameTime = ofGetElapsedTimeMillis();
 }
