@@ -4,26 +4,20 @@ ParticleEmitterBehaviour::ParticleEmitterBehaviour()
 {
 }
 
-ParticleEmitterBehaviour::ParticleEmitterBehaviour(std::vector<ParticleEmitter>& emitters)
-{
-}
 
 ParticleEmitterBehaviour::~ParticleEmitterBehaviour()
 {
 }
 
-void ParticleEmitterBehaviour::SetEmitters(std::vector<ParticleEmitter>& emitters)
+
+void ParticleEmitterBehaviour::Init(ParticleEmitter pe)
 {
 }
 
-void ParticleEmitterBehaviour::Init()
+void ParticleEmitterBehaviour::Update(ParticleEmitter pe)
 {
 }
 
-void ParticleEmitterBehaviour::Update()
-{
-}
-
-void ParticleEmitterBehaviour::Emmit()
+void ParticleEmitterBehaviour::Emmit(ParticleEmitter pe)
 {
 }

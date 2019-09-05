@@ -5,25 +5,16 @@ ParticleBehaviour::ParticleBehaviour()
 
 }
 
-ParticleBehaviour::ParticleBehaviour(std::vector<Particle>& particles)
-{
-
-}
-
 ParticleBehaviour::~ParticleBehaviour()
 {
 
 }
 
-void ParticleBehaviour::SetPaticles(std::vector<Particle>& particles)
+void ParticleBehaviour::Init(Particle& p)
 {
 }
 
-void ParticleBehaviour::Init()
-{
-}
-
-void ParticleBehaviour::Update()
+void ParticleBehaviour::Update(Particle& p)
 {
 }
 

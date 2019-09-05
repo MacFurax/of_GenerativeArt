@@ -7,12 +7,10 @@ class ParticleEmitterBehaviour
 {
 public:
   ParticleEmitterBehaviour();
-  ParticleEmitterBehaviour( std::vector<ParticleEmitter>& emitters);
   ~ParticleEmitterBehaviour();
 
-  void SetEmitters(std::vector<ParticleEmitter>& emitters);
-  virtual void Init();
-  virtual void Update();
-  virtual void Emmit();
+  virtual void Init( ParticleEmitter pe);
+  virtual void Update( ParticleEmitter pe );
+  virtual void Emmit(ParticleEmitter pe);
 };
 
