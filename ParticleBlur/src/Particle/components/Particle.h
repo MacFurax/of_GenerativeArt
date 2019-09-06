@@ -10,9 +10,11 @@ public:
 
   bool alive = false;
   
-  ofVec2f pos = ofVec2f(0.0f, 0.0f); // pos of particle
-  ofVec2f acc = ofVec2f(0.0f, 0.0f); // acceleration of particle
-  ofVec2f speed = ofVec2f(0.0f, 0.0f); // speed of particle
+  
+  ofVec2f pos = ofVec2f::zero(); // pos of particle
+  ofVec2f size = ofVec2f(20.f, 20.f); // size
+  ofVec2f acc = ofVec2f::zero(); // acceleration of particle
+  ofVec2f speed = ofVec2f::zero(); // speed of particle
   // TODO see if orientation could be a vector ?
   float orientation = PI / 2.0f; // orientation of particle in RADIAN 
 

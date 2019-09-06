@@ -14,7 +14,12 @@ void ParticleBehaviour::Init(Particle& p)
 {
 }
 
-void ParticleBehaviour::Update(Particle& p)
+void ParticleBehaviour::Emmit(Particle& p)
+{
+
+}
+
+void ParticleBehaviour::Update(Particle& p, float deltaTime)
 {
 }
 

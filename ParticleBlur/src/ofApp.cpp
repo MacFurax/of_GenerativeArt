@@ -25,9 +25,23 @@ void ofApp::setup(){
   // your init code bellow
   //
 
-  for (auto& em : emitters)
+  //emitterBehaviours.push_back(baseEmitter);
+
+  particleBehaviours.push_back(gravityParticleBehaviour);
+  particleBehaviours.push_back(fadingParticle);
+
+
+  for (auto& p : particles)
   {
-    ofLogNotice() << "Emitter";
+    for (auto& pe : emitters)
+    {
+      baseEmitter.Init(pe, p);
+    }
+
+    for (auto& particleBehaviour : particleBehaviours)
+    {
+      particleBehaviour.Init(p);
+    }
   }
 
 
@@ -40,6 +54,43 @@ void ofApp::update(){
   //
   // your update code start here
   //
+
+  // update emitters
+  for (auto& pe : emitters)
+  {
+    baseEmitter.Update(pe, deltaTime);
+  }
+
+  // update and draw particles
+  for (auto& p : particles)
+  {
+    if (p.alive)
+    {
+      // if particle is alive update his behaviour
+      // and draw it
+      for (auto& particleBehaviour : particleBehaviours)
+      {
+        particleBehaviour.Update(p, deltaTime);
+      }
+      
+      particleDrawer.Draw(p);
+    }
+    else {
+      // check if an emitter is ready to emmit
+      for (auto& emitter : emitters)
+      {
+        if (baseEmitter.Emmit(emitter, p))
+        {
+          // if particle is emmited
+          // allow ParticleBehaviour to set emmit parameters of the particle
+          for (auto& particleBehaviour : particleBehaviours)
+          {
+            particleBehaviour.Emmit(p);
+          }
+        }
+      }
+    }
+  } // for particles
 
   //
   // your update code stop here

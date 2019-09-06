@@ -393,15 +393,16 @@
     <ClCompile Include="$(OF_ROOT)\addons\ofxXmlSettings\libs\tinyxmlerror.cpp" />
     <ClCompile Include="$(OF_ROOT)\addons\ofxXmlSettings\libs\tinyxmlparser.cpp" />
     <ClCompile Include="$(OF_ROOT)\addons\ofxXmlSettings\src\ofxXmlSettings.cpp" />
-    <ClCompile Include="src\impl\BaseEmitter.cpp" />
-    <ClCompile Include="src\impl\FadingParticle.cpp" />
-    <ClCompile Include="src\impl\GravityParticle.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
-    <ClCompile Include="src\Particle.cpp" />
-    <ClCompile Include="src\ParticleBehaviour.cpp" />
-    <ClCompile Include="src\ParticleEmitter.cpp" />
-    <ClCompile Include="src\ParticleEmitterBehaviour.cpp" />
+    <ClCompile Include="src\Particle\behaviours\ParticleBehaviour.cpp" />
+    <ClCompile Include="src\Particle\behaviours\ParticleDrawer.cpp" />
+    <ClCompile Include="src\Particle\behaviours\ParticleEmitterBehaviour.cpp" />
+    <ClCompile Include="src\Particle\components\Particle.cpp" />
+    <ClCompile Include="src\Particle\components\ParticleEmitter.cpp" />
+    <ClCompile Include="src\Particle\impl\BaseEmitter.cpp" />
+    <ClCompile Include="src\Particle\impl\FadingParticle.cpp" />
+    <ClCompile Include="src\Particle\impl\GravityParticle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(OF_ROOT)\addons\ofxAudioFile\libs\dr_flac.h" />
@@ -732,15 +733,15 @@
     <ClInclude Include="$(OF_ROOT)\addons\ofxPDSP\src\types.h" />
     <ClInclude Include="$(OF_ROOT)\addons\ofxXmlSettings\libs\tinyxml.h" />
     <ClInclude Include="$(OF_ROOT)\addons\ofxXmlSettings\src\ofxXmlSettings.h" />
-    <ClInclude Include="src\impl\BaseEmitter.h" />
-    <ClInclude Include="src\impl\FadingParticle.h" />
-    <ClInclude Include="src\impl\GravityParticle.h" />
     <ClInclude Include="src\ofApp.h" />
-    <ClInclude Include="src\Particle.h" />
-    <ClInclude Include="src\ParticleBehaviour.h" />
-    <ClInclude Include="src\ParticleConfig.h" />
-    <ClInclude Include="src\ParticleEmitter.h" />
-    <ClInclude Include="src\ParticleEmitterBehaviour.h" />
+    <ClInclude Include="src\Particle\behaviours\ParticleBehaviour.h" />
+    <ClInclude Include="src\Particle\behaviours\ParticleDrawer.h" />
+    <ClInclude Include="src\Particle\behaviours\ParticleEmitterBehaviour.h" />
+    <ClInclude Include="src\Particle\components\Particle.h" />
+    <ClInclude Include="src\Particle\components\ParticleEmitter.h" />
+    <ClInclude Include="src\Particle\impl\BaseEmitter.h" />
+    <ClInclude Include="src\Particle\impl\FadingParticle.h" />
+    <ClInclude Include="src\Particle\impl\GravityParticle.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">

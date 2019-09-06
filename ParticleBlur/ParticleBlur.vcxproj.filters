@@ -646,26 +646,29 @@
     <ClCompile Include="$(OF_ROOT)\addons\ofxPDSP\libs\audiofft\AudioFFT.cpp">
       <Filter>addons\ofxPDSP\libs\audiofft</Filter>
     </ClCompile>
-    <ClCompile Include="src\Particle.cpp">
-      <Filter>src\libs</Filter>
+    <ClCompile Include="src\Particle\impl\BaseEmitter.cpp">
+      <Filter>src\Particle\impl</Filter>
     </ClCompile>
-    <ClCompile Include="src\ParticleEmitter.cpp">
-      <Filter>src\libs</Filter>
+    <ClCompile Include="src\Particle\impl\FadingParticle.cpp">
+      <Filter>src\Particle\impl</Filter>
     </ClCompile>
-    <ClCompile Include="src\ParticleEmitterBehaviour.cpp">
-      <Filter>src\libs</Filter>
+    <ClCompile Include="src\Particle\impl\GravityParticle.cpp">
+      <Filter>src\Particle\impl</Filter>
     </ClCompile>
-    <ClCompile Include="src\ParticleBehaviour.cpp">
-      <Filter>src\libs</Filter>
+    <ClCompile Include="src\Particle\components\Particle.cpp">
+      <Filter>src\Particle\components</Filter>
     </ClCompile>
-    <ClCompile Include="src\impl\BaseEmitter.cpp">
-      <Filter>src\impl</Filter>
+    <ClCompile Include="src\Particle\components\ParticleEmitter.cpp">
+      <Filter>src\Particle\components</Filter>
     </ClCompile>
-    <ClCompile Include="src\impl\FadingParticle.cpp">
-      <Filter>src\impl</Filter>
+    <ClCompile Include="src\Particle\behaviours\ParticleBehaviour.cpp">
+      <Filter>src\Particle\behaviours</Filter>
     </ClCompile>
-    <ClCompile Include="src\impl\GravityParticle.cpp">
-      <Filter>src\impl</Filter>
+    <ClCompile Include="src\Particle\behaviours\ParticleDrawer.cpp">
+      <Filter>src\Particle\behaviours</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Particle\behaviours\ParticleEmitterBehaviour.cpp">
+      <Filter>src\Particle\behaviours</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -933,11 +936,17 @@
     <Filter Include="addons\ofxPDSP\libs\audiofft">
       <UniqueIdentifier>{59a2c3e5-9ecd-4a8c-af20-23471e19146e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\libs">
-      <UniqueIdentifier>{dcf8de05-5e7a-4c4f-b2f7-0a359115537d}</UniqueIdentifier>
+    <Filter Include="src\Particle">
+      <UniqueIdentifier>{a75dbb3d-d140-4c42-af5a-a772aa5cd802}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\impl">
-      <UniqueIdentifier>{ffbcfe49-2702-4b33-a670-fa1c391ff407}</UniqueIdentifier>
+    <Filter Include="src\Particle\impl">
+      <UniqueIdentifier>{f4198ddf-3c90-43f5-940f-0eeb5932fa5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Particle\components">
+      <UniqueIdentifier>{f3ebe6ce-c6c5-41a3-bf27-515ee2cf46ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Particle\behaviours">
+      <UniqueIdentifier>{19ca0c94-ce84-4d44-99f4-254277d1cb33}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1928,29 +1937,29 @@
     <ClInclude Include="$(OF_ROOT)\addons\ofxPDSP\libs\audiofft\AudioFFT.h">
       <Filter>addons\ofxPDSP\libs\audiofft</Filter>
     </ClInclude>
-    <ClInclude Include="src\Particle.h">
-      <Filter>src\libs</Filter>
+    <ClInclude Include="src\Particle\impl\BaseEmitter.h">
+      <Filter>src\Particle\impl</Filter>
     </ClInclude>
-    <ClInclude Include="src\ParticleConfig.h">
-      <Filter>src\libs</Filter>
+    <ClInclude Include="src\Particle\impl\FadingParticle.h">
+      <Filter>src\Particle\impl</Filter>
     </ClInclude>
-    <ClInclude Include="src\ParticleEmitter.h">
-      <Filter>src\libs</Filter>
+    <ClInclude Include="src\Particle\impl\GravityParticle.h">
+      <Filter>src\Particle\impl</Filter>
     </ClInclude>
-    <ClInclude Include="src\ParticleEmitterBehaviour.h">
-      <Filter>src\libs</Filter>
+    <ClInclude Include="src\Particle\components\Particle.h">
+      <Filter>src\Particle\components</Filter>
     </ClInclude>
-    <ClInclude Include="src\ParticleBehaviour.h">
-      <Filter>src\libs</Filter>
+    <ClInclude Include="src\Particle\components\ParticleEmitter.h">
+      <Filter>src\Particle\components</Filter>
     </ClInclude>
-    <ClInclude Include="src\impl\BaseEmitter.h">
-      <Filter>src\impl</Filter>
+    <ClInclude Include="src\Particle\behaviours\ParticleBehaviour.h">
+      <Filter>src\Particle\behaviours</Filter>
     </ClInclude>
-    <ClInclude Include="src\impl\FadingParticle.h">
-      <Filter>src\impl</Filter>
+    <ClInclude Include="src\Particle\behaviours\ParticleDrawer.h">
+      <Filter>src\Particle\behaviours</Filter>
     </ClInclude>
-    <ClInclude Include="src\impl\GravityParticle.h">
-      <Filter>src\impl</Filter>
+    <ClInclude Include="src\Particle\behaviours\ParticleEmitterBehaviour.h">
+      <Filter>src\Particle\behaviours</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
