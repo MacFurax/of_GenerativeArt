@@ -12,7 +12,6 @@ void BaseEmitter::Init(ParticleEmitter& pe, Particle &p)
   pe.lastEmiteTime = 0.0f;
 
   p.alive = false;
-  p.color = ofColor::greenYellow;
 
 }
 
@@ -25,13 +24,15 @@ void BaseEmitter::Update(ParticleEmitter& pe, float deltaTime)
 bool  BaseEmitter::Emmit(ParticleEmitter& pe, Particle &p)
 {
   // emitte particle
-  if (pe.currentTime - pe.lastEmiteTime >= 1.0f / pe.emitFreq)
+  if (!p.alive)
   {
-    if (!p.alive)
+    if ((pe.currentTime - pe.lastEmiteTime) >= (1.0f / pe.emitFreq))
     {
+      cout << "Emmite\n";
       p.alive = true;
       p.pos = pe.pos;
-      p.acc = ofVec2f(0.0f, 0.1f);
+      p.acc = ofVec2f::zero();
+      pe.lastEmiteTime = pe.currentTime;
       return true;
     }
   }

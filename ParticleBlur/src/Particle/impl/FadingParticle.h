@@ -12,4 +12,7 @@ public:
   void Init(Particle& p);
   void Emmit(Particle& p);
   void Update(Particle& p, float deltaTime);
+
+  ofColor startColor = ofColor::yellowGreen;
+  ofColor endColor = ofColor::saddleBrown;
 };

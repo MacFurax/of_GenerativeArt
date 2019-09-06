@@ -12,6 +12,7 @@ public:
   
   
   ofVec2f pos = ofVec2f::zero(); // pos of particle
+  ofVec2f startSize = ofVec2f(20.f, 20.f);
   ofVec2f size = ofVec2f(20.f, 20.f); // size
   ofVec2f acc = ofVec2f::zero(); // acceleration of particle
   ofVec2f speed = ofVec2f::zero(); // speed of particle
