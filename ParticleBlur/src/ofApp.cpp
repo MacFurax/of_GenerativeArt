@@ -25,11 +25,11 @@ void ofApp::setup(){
   // your init code bellow
   //
 
-  //emitterBehaviours.push_back(baseEmitter);
+  cout << "Start Setup\n";
 
-  particleBehaviours.push_back(gravityParticleBehaviour);
-  particleBehaviours.push_back(fadingParticle);
+  emitters[0].emitFreq = 40.0f;
 
+  gravityParticleBehaviour.gravity = ofVec2f(0.0f, 100.0f);
 
   for (auto& p : particles)
   {
@@ -38,12 +38,11 @@ void ofApp::setup(){
       baseEmitter.Init(pe, p);
     }
 
-    for (auto& particleBehaviour : particleBehaviours)
-    {
-      particleBehaviour.Init(p);
-    }
+    gravityParticleBehaviour.Init(p);
+    fadingParticle.Init(p);
   }
 
+  cout << "End Setup\n";
 
 }
 
@@ -61,19 +60,15 @@ void ofApp::update(){
     baseEmitter.Update(pe, deltaTime);
   }
 
-  // update and draw particles
+  // update 
   for (auto& p : particles)
   {
     if (p.alive)
     {
       // if particle is alive update his behaviour
-      // and draw it
-      for (auto& particleBehaviour : particleBehaviours)
-      {
-        particleBehaviour.Update(p, deltaTime);
-      }
+      gravityParticleBehaviour.Update(p, deltaTime);
+      fadingParticle.Update(p, deltaTime);
       
-      particleDrawer.Draw(p);
     }
     else {
       // check if an emitter is ready to emmit
@@ -83,10 +78,8 @@ void ofApp::update(){
         {
           // if particle is emmited
           // allow ParticleBehaviour to set emmit parameters of the particle
-          for (auto& particleBehaviour : particleBehaviours)
-          {
-            particleBehaviour.Emmit(p);
-          }
+          gravityParticleBehaviour.Emmit(p);
+          fadingParticle.Emmit(p);
         }
       }
     }
@@ -102,6 +95,16 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
 
+  ofSetColor(0.0f);
+  ofDrawCircle(100.f, 100.f, 30.f);
+
+  for (auto& p : particles)
+  {
+    if (p.alive)
+    {
+      particleDrawer.Draw(p);
+    }
+  }
 }
 
 //--------------------------------------------------------------
