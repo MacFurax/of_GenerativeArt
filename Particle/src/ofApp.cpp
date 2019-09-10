@@ -18,9 +18,14 @@ void ofApp::setup(){
 
   lastFrameTime = ofGetElapsedTimeMillis();
 
+
   setupImGui();
+
+  // you initialisation is done in setupApp()
+  setupApp();
 }
 
+//--------------------------------------------------------------
 void ofApp::setupImGui()
 {
 
@@ -49,23 +54,85 @@ void ofApp::setupImGui()
 }
 
 //--------------------------------------------------------------
+void ofApp::setupApp()
+{
+  lastParticleSpawn = lastFrameTime-1;
+  ofFboSettings fboSettings;
+
+  fboSettings.width = ofGetWindowWidth();
+  fboSettings.height = ofGetWindowHeight();
+  fboSettings.internalformat = GL_RGBA;
+  fboSettings.textureTarget = GL_TEXTURE_2D;
+
+  canvas.allocate(fboSettings);
+}
+
+//--------------------------------------------------------------
 void ofApp::update(){
+
   deltaTime = 0.001f*(float)(ofGetElapsedTimeMillis() - lastFrameTime);
 
   // your code come here
+  for (auto& particle : particles)
+  {
+    if (particle.alive)
+    {
+      // update pos
+      particle.pos += particle.speed * deltaTime;
+      particle.currentTTL -= deltaTime;
+      if (particle.currentTTL < 0.0f)
+      {
+        particle.alive = false;
+      }
+    }
 
+    // check if we spawn a new particle
+    if (lastFrameTime >= lastParticleSpawn + particleSpawnInterval && !particle.alive)
+    {
+      lastParticleSpawn = lastFrameTime;
+      particle.alive = true;
+
+      particle.pos = ofGetWindowSize() / 2.0f;
+      particle.currentColor = ofColor(ofRandom(255), ofRandom(255), ofRandom(255), 150);
+      particle.size.x = 40.0f + ofRandom(40.0f);
+      particle.size.y = 40.0f + ofRandom(40.0f);
+      particle.initialTTL = 5.f + ofRandom(20.f);
+      particle.currentTTL = particle.initialTTL;
+
+      float orientation = ofRandom(360.0f);
+      float speed = 10.f + ofRandom(15.0f);
+      particle.speed.x = glm::sin(orientation) * speed;
+      particle.speed.y = glm::cos(orientation) * speed;
+    }
+  }
 
   lastFrameTime = ofGetElapsedTimeMillis();
 }
 
 //--------------------------------------------------------------
-void ofApp::draw(){
+void ofApp::draw()
+{
+  canvas.begin();
+  ofBackground(255);
+  for (auto& particle : particles)
+  {
+    if (particle.alive)
+    {
+      // draw particle
+      ofSetColor(particle.currentColor);
+      float size = particle.size.x * (particle.currentTTL/particle.initialTTL);
+      ofDrawCircle(particle.pos, size);
+    }
+  }
+  canvas.end();
 
+  canvas.draw(0.f, 0.f);
 
   //must always be called last
   drawUI();
 }
 
+//--------------------------------------------------------------
 void ofApp::drawUI()
 {
   gui.begin();

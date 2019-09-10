@@ -5,11 +5,27 @@
 #include "ofxXmlSettings.h"
 #include "CorporateGreyTheme.h" 
 
+class Particle
+{
+public:
+  bool alive;
+  glm::vec2 pos;
+  glm::vec2 acc;
+  glm::vec2 speed;
+
+  glm::vec2 size;
+  ofColor initialColor;
+  ofColor currentColor;
+  float initialTTL;
+  float currentTTL;
+};
+
 class ofApp : public ofBaseApp{
 
 	public:
 		void setup();
     void setupImGui();
+    void setupApp();
 		void update();
 		void draw();
 
@@ -35,4 +51,12 @@ class ofApp : public ofBaseApp{
 		
     ofxImGui::Gui gui;
 
+    // start you definition here
+    std::vector<Particle> particles = std::vector<Particle>(1000);
+
+    const uint64_t        particleSpawnInterval = 500;
+    uint64_t              lastParticleSpawn = 0;
+
+    ofFbo                 canvas;
+    
 };
