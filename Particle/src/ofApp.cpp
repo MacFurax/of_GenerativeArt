@@ -112,6 +112,7 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw()
 {
+  // draw to canvas
   canvas.begin();
   ofBackground(255);
   for (auto& particle : particles)
@@ -126,6 +127,7 @@ void ofApp::draw()
   }
   canvas.end();
 
+  // draw canvas 
   canvas.draw(0.f, 0.f);
 
   //must always be called last
